@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shreynode-deployment
+spec:
+  replicas: 2 # Change the number of replicas as needed
+  selector:
+    matchLabels:
+      app: shreynode
+  template:
+    metadata:
+      labels:
+        app: shreynode
+    spec:
+      containers:
+        - name: shreynode-container
+          image: shrey209/shreynode1:latest # Ensure this image exists on Docker Hub
+          ports:
+            - containerPort: 80 # Change this if your app uses a different port
