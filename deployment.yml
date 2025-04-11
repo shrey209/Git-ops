@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: shreynode-container
-          image: shrey209/shreynode1:1744351422
+          image: shrey209/shreynode1:1744351455
           ports:
             - containerPort: 80 # Change this if your app uses a different port
