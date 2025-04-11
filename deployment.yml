@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: shreynode-deployment
 spec:
-  replicas: 2 # Change the number of replicas as needed
+  replicas: 2
   selector:
     matchLabels:
       app: shreynode
@@ -16,4 +16,10 @@ spec:
         - name: shreynode-container
           image: shrey209/shreynode1:1744361340
           ports:
-            - containerPort: 80 # Change this if your app uses a different port
+            - containerPort: 80
+          env:
+            - name: MONGO_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: mongo-config
+                  key: MONGO_URI
