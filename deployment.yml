@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: shreynode-container
-          image: shrey209/shreynode1:1745219589
+          image: shrey209/shreynode1:1745222196
           ports:
             - containerPort: 80
           env:
