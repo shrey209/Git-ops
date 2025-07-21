@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: go-app-container
-          image: shrey209/go-app:20250721173054
+          image: shrey209/go-app:20250721173111
           ports:
             - containerPort: 8080
